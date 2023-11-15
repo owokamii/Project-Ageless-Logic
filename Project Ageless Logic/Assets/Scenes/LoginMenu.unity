@@ -377,7 +377,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Enter text...
+  m_text: Enter password...
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: d3ed9d147b832cc478dfaf15c0f12644, type: 2}
   m_sharedMaterial: {fileID: 6321256743553473767, guid: d3ed9d147b832cc478dfaf15c0f12644, type: 2}
@@ -740,7 +740,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &153033010
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2608,7 +2608,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Enter text...
+  m_text: Enter username...
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: d3ed9d147b832cc478dfaf15c0f12644, type: 2}
   m_sharedMaterial: {fileID: 6321256743553473767, guid: d3ed9d147b832cc478dfaf15c0f12644, type: 2}
@@ -4045,7 +4045,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1151847519
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5614,7 +5614,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Enter text...
+  m_text: Enter username...
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: d3ed9d147b832cc478dfaf15c0f12644, type: 2}
   m_sharedMaterial: {fileID: 6321256743553473767, guid: d3ed9d147b832cc478dfaf15c0f12644, type: 2}
@@ -5769,7 +5769,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Enter text...
+  m_text: Enter password...
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: d3ed9d147b832cc478dfaf15c0f12644, type: 2}
   m_sharedMaterial: {fileID: 6321256743553473767, guid: d3ed9d147b832cc478dfaf15c0f12644, type: 2}
