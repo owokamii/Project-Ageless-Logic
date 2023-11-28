@@ -6,9 +6,14 @@ using Unity.VisualScripting;
 using DG.Tweening;
 using UnityEngine;
 using Random = UnityEngine.Random;
+using TMPro;
+using UnityEngine.SocialPlatforms.Impl;
 
 public class Puzzle3Manager : MonoBehaviour
 {
+    [SerializeField] private TMP_Text highscoreText, goalText;
+    private int highscore = 0;
+
     [SerializeField] private int width = 4;
     [SerializeField] private int height = 4;
 
@@ -36,6 +41,8 @@ public class Puzzle3Manager : MonoBehaviour
     void Start()
     {
         ChangeState(GameState.GenerateLevel);
+
+        goalText.text = "Goal : " + winCondition.ToString();
     }
 
     private void ChangeState(GameState newState)
@@ -72,6 +79,16 @@ public class Puzzle3Manager : MonoBehaviour
         { 
             return; 
         }
+
+        foreach (var block in blocks)
+        {
+            if (block.value > highscore)
+            {
+                highscore = block.value;
+            }
+        }
+
+        highscoreText.text = "High Score : " + highscore.ToString();
 
         if (SwipeManager.swipeUp || Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow))
         {
