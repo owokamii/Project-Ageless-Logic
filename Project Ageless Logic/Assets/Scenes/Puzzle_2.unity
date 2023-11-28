@@ -259,10 +259,10 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 582727448}
+  - {fileID: 414409559}
   - {fileID: 757250392}
   - {fileID: 81593857}
   - {fileID: 1146251557}
-  - {fileID: 414409559}
   m_Father: {fileID: 788732430}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -327,10 +327,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'this is the puzzle''s tutorial
-
-    here you will learn how to play the
-    game'
+  m_text: memory matching game, where players flip and match pairs of images.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: d3ed9d147b832cc478dfaf15c0f12644, type: 2}
   m_sharedMaterial: {fileID: 6321256743553473767, guid: d3ed9d147b832cc478dfaf15c0f12644, type: 2}
@@ -393,7 +390,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: -249.677}
+  m_margin: {x: -83.70422, y: 0, z: -92.074646, w: -249.677}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -623,7 +620,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 398966084}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1483339208}
+        m_TargetAssemblyTypeName: PauseMenu, Assembly-CSharp
+        m_MethodName: DisplayTutorial
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &398966084
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2020,7 +2029,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1146251557
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2567,6 +2576,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1483339209}
   - component: {fileID: 1483339208}
+  - component: {fileID: 1483339210}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -2587,6 +2597,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pauseMenu: {fileID: 81593856}
+  tutorialMenu: {fileID: 1146251556}
 --- !u!4 &1483339209
 Transform:
   m_ObjectHideFlags: 0
@@ -2595,13 +2606,35 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1483339207}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 543.4698, y: 1427.9039, z: 22.442118}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -100.8125, y: 1010.24133, z: 27.310947}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1592102098}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1483339210
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1483339207}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b87e5757db4e2742b4d1c13ea002c9e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  musicMixer: {fileID: 7659342668203868898, guid: 03d160dac4c0fc247b2441e7fb00aed0, type: 2}
+  sfxMixer: {fileID: -6367720203007442727, guid: 03d160dac4c0fc247b2441e7fb00aed0, type: 2}
+  music:
+  - name: BGM
+    loop: 1
+    clip: {fileID: 8300000, guid: fc785680a5c47e04d9771ee556c02b75, type: 3}
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
+  sfx: []
 --- !u!1 &1592102097
 GameObject:
   m_ObjectHideFlags: 0
@@ -2631,6 +2664,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 1483339209}
   - {fileID: 595159785}
   - {fileID: 519420032}
   m_Father: {fileID: 0}
@@ -2907,6 +2941,5 @@ SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 1592102098}
-  - {fileID: 1483339209}
   - {fileID: 788732430}
   - {fileID: 1130440652}

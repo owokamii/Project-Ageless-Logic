@@ -307,7 +307,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 867}
-  m_SizeDelta: {x: 200, y: 50}
+  m_SizeDelta: {x: 229.986, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &224021293
 MonoBehaviour:
@@ -331,8 +331,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'Goal : 2048'
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: d3ed9d147b832cc478dfaf15c0f12644, type: 2}
+  m_sharedMaterial: {fileID: 6321256743553473767, guid: d3ed9d147b832cc478dfaf15c0f12644, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -362,7 +362,7 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 17
   m_HorizontalAlignment: 1
   m_VerticalAlignment: 256
   m_textAlignment: 65535
@@ -2330,6 +2330,7 @@ GameObject:
   - component: {fileID: 1483339209}
   - component: {fileID: 1483339208}
   - component: {fileID: 1483339210}
+  - component: {fileID: 1483339211}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -2350,6 +2351,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pauseMenu: {fileID: 81593856}
+  tutorialMenu: {fileID: 0}
 --- !u!4 &1483339209
 Transform:
   m_ObjectHideFlags: 0
@@ -2358,12 +2360,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1483339207}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1592102098}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1483339210
 MonoBehaviour:
@@ -2409,6 +2411,28 @@ MonoBehaviour:
     color: {r: 0.76862746, g: 0.16470589, b: 0.03529412, a: 1}
   - value: 2048
     color: {r: 0.827451, g: 0.23529412, b: 0.9254902, a: 1}
+--- !u!114 &1483339211
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1483339207}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b87e5757db4e2742b4d1c13ea002c9e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  musicMixer: {fileID: 7659342668203868898, guid: 03d160dac4c0fc247b2441e7fb00aed0, type: 2}
+  sfxMixer: {fileID: -6367720203007442727, guid: 03d160dac4c0fc247b2441e7fb00aed0, type: 2}
+  music:
+  - name: BGM
+    loop: 1
+    clip: {fileID: 8300000, guid: 19f3dcdb7fe8684468de57f69eb03ff8, type: 3}
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
+  sfx: []
 --- !u!1 &1592102097
 GameObject:
   m_ObjectHideFlags: 0
@@ -2438,6 +2462,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 1483339209}
   - {fileID: 595159785}
   - {fileID: 519420032}
   m_Father: {fileID: 0}
@@ -2574,10 +2599,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'this is the puzzle''s tutorial
-
-    here you will learn how to play the
-    game'
+  m_text: navigate a 4x4 grid by swiping and tiles moving in the same direction will
+    merge when collided with one another. Game ends when the grid is full with no
+    available moves left.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: d3ed9d147b832cc478dfaf15c0f12644, type: 2}
   m_sharedMaterial: {fileID: 6321256743553473767, guid: d3ed9d147b832cc478dfaf15c0f12644, type: 2}
@@ -2640,7 +2664,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: -249.677}
+  m_margin: {x: -124.88187, y: 0, z: -100.59912, w: -249.677}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -3239,4 +3263,3 @@ SceneRoots:
   - {fileID: 1592102098}
   - {fileID: 788732430}
   - {fileID: 2108166441}
-  - {fileID: 1483339209}
