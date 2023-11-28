@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class GameController : MonoBehaviour
 {
@@ -24,6 +25,9 @@ public class GameController : MonoBehaviour
 
     private string firstGuessPuzzle, secondGuessPuzzel;
 
+    private int score = 0;
+    public TextMeshProUGUI scoreText;
+
     private void Awake()
     {
         puzzles = Resources.LoadAll<Sprite>("sprites/candies");
@@ -38,6 +42,12 @@ public class GameController : MonoBehaviour
         Shuffle(gamePuzzles);
 
     }
+
+    private void Update()
+    {
+        scoreText.text = "Score : " + score.ToString();
+    }
+
 
     void GetButtons()
     {
@@ -112,6 +122,8 @@ public class GameController : MonoBehaviour
 
         if(firstGuessPuzzle == secondGuessPuzzel)
         {
+            score++;
+
             yield return new WaitForSeconds(0.5f);
 
             btns[firstGuessIndex].interactable = false;
