@@ -21,4 +21,6 @@ EditorBuildSettings:
     path: Assets/Scenes/Puzzle_3.unity
     guid: 2cbcf37c058184b46949e0e947efcec7
   m_configObjects:
+    com.unity.adaptiveperformance.loader_settings: {fileID: 11400000, guid: 71e1fec4f9d3b8a4ebdb0f82b8953165, type: 2}
+    com.unity.adaptiveperformance.samsung.android.provider_settings: {fileID: 11400000, guid: 1eba2030416738044b6f5a3a900f58c5, type: 2}
     com.unity.adaptiveperformance.simulator.provider_settings: {fileID: 11400000, guid: 829a14500c01a23418fae7125dcf70dc, type: 2}
